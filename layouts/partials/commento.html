@@ -1,0 +1,9 @@
+{{/* Only include commento if it's configured */}}
+{{ if and (isset $.Site.Params.comments.commento "host") (isset $.Site.Params.comments.commento "js") }}
+<section id="comments-section-js" class="e-section">
+  <h2 class="e-section-headline">Comments</h2>
+  <div class="content__tile content__tile-content">
+    <div id="commento"></div>
+  </div>
+</section>
+{{ end }}

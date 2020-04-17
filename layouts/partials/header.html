@@ -27,4 +27,10 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 </head>
+{{/* Only include commento if it's configured */}} {{ if and (isset $.Site.Params.comments.commento "host") (isset $.Site.Params.comments.commento "js") }}
+<script
+  defer
+  src="{{ $.Site.Params.comments.commento.host }}{{ $.Site.Params.comments.commento.js }}"
+></script>
+{{ end }}
 <body>
